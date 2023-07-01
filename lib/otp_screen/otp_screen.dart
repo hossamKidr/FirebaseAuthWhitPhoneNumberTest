@@ -4,6 +4,8 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:phone_auth_tist/cubit/auth_cubit.dart';
 import 'package:phone_auth_tist/home_screen/home_screen.dart';
 
+import '../widgets/custome_otp.dart';
+
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
 
@@ -32,15 +34,16 @@ class _OtpScreenState extends State<OtpScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    OtpTextField(
-                      numberOfFields: 6,
-                      showFieldAsBox: true,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      onSubmit: (otp){
-                        otpCode = otp;
-                      },
-                    ),
-                    SizedBox(height: 20,),
+                   // OtpTextField(
+                    //  numberOfFields: 6,
+                     // showFieldAsBox: true,
+                    //  mainAxisAlignment: MainAxisAlignment.center,
+                    //  onSubmit: (otp){
+                       // otpCode = otp;
+                      //},
+                   // ),
+                    const CustomeOtp(),
+                    const SizedBox(height: 40,),
                     SizedBox(
                       width: double.infinity,
                       height: 50,
